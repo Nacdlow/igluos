@@ -38,6 +38,11 @@ apt purge fake-hwclock
 uname -a
 EOF
 
+# For Real-time clock
+sudo install -v -m755 data/hwclock-set $CHROOT/lib/udev/hwclock-set
+
+echo "Installing iglu systemd service"
+sudo install -v -m644 data/iglu.service $CHROOT/lib/systemd/system/iglu.service
 
 sudo proot -q qemu-arm-static \
 	-r ${PWD}/${CHROOT}/ \

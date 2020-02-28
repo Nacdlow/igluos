@@ -1,4 +1,6 @@
 *.zip
 *.img
 mnt/
+boot/
+chroot/
 wpa_conf.txt

@@ -1,0 +1,10 @@
+[Unit]
+Description=Nacdlow iglu Server
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/iglu/nacdlow-server
+
+[Install]
+WantedBy=multi-user.target
