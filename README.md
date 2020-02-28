@@ -9,23 +9,16 @@ which boots on startup.
 It also allows you to also set up WiFi configuration (eduroam, in this case)
 for expo purposes.
 
-## What does this solve?
+## What are the changes of this compared to Raspbian Lite?
 
-It solves:
+With iglüOS, the following features have been added:
 
-- Having to copy over new files to the Raspberry Pi, or pull it from the WiFi
-  and compile it (may take time).
-- Having to set up the system each time.
-- Having to set up WiFi manually.
-- Having a "cool" factor.
-
-How it solves it:
-
-- By pre-compiling the latest binary of iglü, including some (binary) update
-  mechanism.
-- Having a systemd service for iglü.
-- Having the WiFi pre-configured.
-- Giving it a "cool" name (iglüOS).
+- Support for Real-time Clock (specifically, PCF8523).
+- Support for using Raspberry Pi's Ethernet adapter (appears as Ethernet device
+  over USB).
+- Support for eduroam with pre-filled credentials.
+- Installs iglü server and adds it as a service.
+- Installs and runs our e-ink display program as a service.
 
 ## Prerequisites
 

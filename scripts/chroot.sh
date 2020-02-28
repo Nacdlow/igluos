@@ -33,7 +33,7 @@ sudo proot -q qemu-arm-static \
 	-0 \
 	qemu-arm-static /bin/bash <<EOF
 export LC_ALL=C
-#apt update && apt upgrade-y
+apt update && apt upgrade-y
 apt purge fake-hwclock
 uname -a
 EOF
