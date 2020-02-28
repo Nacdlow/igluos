@@ -1,3 +1,4 @@
 *.zip
 *.img
 mnt/
+wpa_conf.txt
