@@ -1,6 +1,9 @@
 #!/bin/bash
 
-sudo rm $CHROOT/usr/bin/qemu-arm-static
+if [ -z $CHROOT ]; then
+	echo "\$CHROOT is not set! This may damage your host system."
+	exit
+fi
 
 echo "Unmounting the image"
 sudo umount $CHROOT
