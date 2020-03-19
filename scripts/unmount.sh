@@ -8,5 +8,9 @@ fi
 echo "Unmounting the image"
 sudo umount $CHROOT
 
+
+echo "Unmounting boot partition..."
+sudo umount $BOOT
+
 echo "Closing kpartx loop"
 sudo kpartx -d $IMG_FILE

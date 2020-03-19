@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/iglu/nacdlow-server
+ExecStart=/iglu/nacdlow-server run --port 443
 
 [Install]
 WantedBy=multi-user.target
