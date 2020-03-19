@@ -13,12 +13,14 @@ for expo purposes.
 
 With iglüOS, the following features have been added:
 
-- Support for Real-time Clock (specifically, PCF8523).
+- Support for Real-time Clock (specifically, PCF8523), and removes the
+  `fake-hwclock`.
 - Support for using Raspberry Pi's Ethernet adapter (appears as Ethernet device
-  over USB).
+  over USB, static ip set to `10.0.0.2`).
 - Support for eduroam with pre-filled credentials.
 - Installs iglü server and adds it as a service.
 - Installs and runs our e-ink display program as a service.
+- Enables SPI for e-ink display support.
 
 ## Prerequisites
 

@@ -4,3 +4,4 @@ mnt/
 boot/
 chroot/
 wpa_conf.txt
+nacdlow-server/

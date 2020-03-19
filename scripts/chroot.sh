@@ -45,17 +45,14 @@ export LC_ALL=C
 apt update
 #apt upgrade -y
 apt purge fake-hwclock -y
-apt install python3-pip libtiff5-dev libopenjp2-7-dev fonts-freefont-ttf -y
-uname -a
+apt install python3-pip libtiff5-dev libopenjp2-7-dev fonts-freefont-ttf libatlas-base-dev -y
 ln -s /lib/systemd/system/getty@.service /etc/systemd/system/getty.target.wants/getty@ttyGS0.service
 ln -s /lib/systemd/system/ssh.service /etc/systemd/system/multi-user.target.wants/ssh.service
 pip3 install RPi.GPIO spidev qrcode Pillow twython python-dotenv
+pip3 install numpy scipy matplotlib ipython jupyter pandas sympy nose
 # install go
 wget https://dl.google.com/go/go1.14.linux-armv6l.tar.gz
 tar -C /usr/local -xzf go1.14.linux-armv6l.tar.gz
-#cd /nacdlow-server
-#go get
-#go install
 EOF
 echo -e "interface usb0\nstatic ip_address=10.0.0.2" | sudo tee -a ${CHROOT}/etc/dhcpcd.conf
 
